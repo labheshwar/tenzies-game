@@ -15,4 +15,5 @@ One of the world's Fastest Dice Game! The object of the game is to get all ten o
 I also added some features by myself which were not covered in the course.
 
 1 - It now tells you how many times you have rolled the dice.
+<br>
 2 - Added winning screen.
