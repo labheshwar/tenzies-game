@@ -67,23 +67,24 @@ export default function App() {
     ))
     
     return (
-        <main>
-            {tenzies && <Confetti />}
-            <h1 className="title">Tenzies</h1>
-            <p className="instructions">Roll until all dice are the same. 
-            Click each die to freeze it at its current value between rolls.</p>
-            <div className="dice-container">
-                {diceElements}
-            </div>
-            <button 
-                className="roll-dice" 
-                onClick={rollDice}
-            >
-                {tenzies ? "New Game" : "Roll"}
-            </button>
-            <p className="dice-rolls">
-                {tenzies ? `You rolled ${diceRolls} times.` : `Dice Rolled: ${diceRolls}`}
-            </p>
-        </main>
+        tenzies ? 
+            <main>
+                <Confetti />
+                <h1>You won!</h1>
+                <p>Dice Rolled: {diceRolls}</p>
+                <button className="roll-dice" onClick={rollDice}>Play Again</button>
+            </main> :
+            <main>
+                <h1 className="title">Tenzies</h1>
+                <p className="instructions">Roll until all dice are the same. 
+                Click each die to freeze it at its current value between rolls.</p>
+                <div className="dice-container">
+                    {diceElements}
+                </div>
+                <button className="roll-dice" onClick={rollDice}>Roll</button>
+                <p className="dice-rolls">
+                    "You rolled {diceRolls} times."
+                </p>
+            </main>
     )
 }
