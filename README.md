@@ -17,3 +17,5 @@ I also added some features by myself which were not covered in the course.
 1 - It now tells you how many times you have rolled the dice.
 <br>
 2 - Added winning screen.
+
+#### The app is hosted at: [Tenzies Game](https://tenziesgamebylabheshwar.netlify.app/)
