@@ -1,21 +1,18 @@
-# Tenzies Game
+# Tenzies Game 🎲
 
-This project was dual effort of Bob Ziroll from [Scrimba](https://scrimba.com/) React Course which is completely free (By the way).
+🎉 This project was a dual effort inspired by Bob Ziroll's Scrimba React Course, which is completely free! Thanks to Scrimba's interactive coding UI, learning has never been easier. It was a fun journey working on this project and completing all the challenges assigned by Instructor Bob Ziroll throughout the course.
 
-With Scrimba, learning has never been easier. This project was really a fun one because of Scrimba's interactive coding UI.
-
-I was able to complete all the challenges that were assigned by Instructor Bob Ziroll through out the course.
+🔗 The app is hosted at: [https://tenziesgamebylabheshwar.netlify.app](https://tenziesgamebylabheshwar.netlify.app)
 
 ## About the Tenzies Game
 
-One of the world's Fastest Dice Game! The object of the game is to get all ten of your dice to show the same number. You need to roll as fast as you can until you get all your dice on the same number Sure there are a few more rules, but you got the idea!
+🎲 Tenzies is one of the world's fastest dice games! The objective of the game is to roll all ten of your dice to show the same number. Roll the dice as fast as you can until you achieve the goal of getting all your dice on the same number. Although there are a few more rules, the main idea is to roll your way to victory!
 
-### Add-ons
+## Add-ons
 
-I also added some features by myself which were not covered in the course.
+✨ In addition to the course content, I implemented some additional features to enhance the game experience:
 
-1 - It now tells you how many times you have rolled the dice.
-<br>
-2 - Added winning screen.
+1. 🔄 Roll counter: The game now keeps track of how many times you have rolled the dice, allowing you to monitor your progress.
+2. 🏆 Winning screen: Enjoy a celebratory winning screen when you successfully match all ten dice!
 
-#### The app is hosted at: [Tenzies Game](https://tenziesgamebylabheshwar.netlify.app/)
+⚡️ Dive into the world of Tenzies Game and challenge yourself to achieve the perfect roll. Join me in this exciting dice rolling adventure at [https://tenziesgamebylabheshwar.netlify.app](https://tenziesgamebylabheshwar.netlify.app). Let the good times roll!
