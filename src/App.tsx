@@ -3,22 +3,34 @@ import Die from "./Die"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
 
+interface DieObj {
+    value: number,
+    isHeld: boolean,
+    id: string
+}
+
+interface IState {
+    dice: DieObj[],
+    tenzies: boolean,
+    diceRolls: number
+}
+
 export default function App() {
 
-    const [dice, setDice] = React.useState(allNewDice());
-    const [tenzies, setTenzies] = React.useState(false);
-    const [diceRolls, setDiceRolls] = React.useState(0);
+    const [dice, setDice] = React.useState<IState["dice"]>(allNewDice());
+    const [tenzies, setTenzies] = React.useState<IState["tenzies"]>(false);
+    const [diceRolls, setDiceRolls] = React.useState<IState["diceRolls"]>(0);
     
     React.useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
-        const firstValue = dice[0].value
+        const firstValue = dice[0]?.value
         const allSameValue = dice.every(die => die.value === firstValue)
         if (allHeld && allSameValue) {
             setTenzies(true)
         }
     }, [dice])
 
-    function generateNewDie() {
+    function generateNewDie() : DieObj {
         return {
             value: Math.ceil(Math.random() * 6),
             isHeld: false,
@@ -26,7 +38,7 @@ export default function App() {
         }
     }
     
-    function allNewDice() {
+    function allNewDice() : DieObj[] {
         const newDice = []
         for (let i = 0; i < 10; i++) {
             newDice.push(generateNewDie())
@@ -34,7 +46,7 @@ export default function App() {
         return newDice
     }
     
-    function rollDice() {
+    function rollDice() : void {
         if(!tenzies) {
             setDiceRolls(diceRolls => diceRolls + 1)
             setDice(oldDice => oldDice.map(die => {
@@ -49,7 +61,7 @@ export default function App() {
         }
     }
     
-    function holdDice(id) {
+    function holdDice(id : string) : void {
         setDice(oldDice => oldDice.map(die => {
             return die.id === id ? 
                 {...die, isHeld: !die.isHeld} :
